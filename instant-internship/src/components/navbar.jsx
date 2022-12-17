@@ -25,7 +25,7 @@ export default function Navbar(){
       
         return (
           <>
-           <Box p={'30px'} position='static'>
+           <Box p={'30px'} position='static' box-shadow= 'rgba(0, 0, 0, 0.24) 0px 3px 8px'>
             <Drawer
               isOpen={isOpen}
               placement='left'
@@ -96,7 +96,7 @@ export default function Navbar(){
             </div>
             <div style={{display:'flex',justifyContent:'space-between',gap:'30px',paddingRight:'30px'}}>
                 <Link to={'/cart'}><Image boxSize='50px' src='https://tse2.mm.bing.net/th?id=OIP.UaVAH7RRBW8BYQ4T_wBxYgAAAA&pid=Api&P=0' alt='Error'/></Link>
-                <Link to={'/login'}><Button _hover={{cursor:'pointer'}} p='10px 25px' fontSize='20px' bgColor='red' color='white' border='transparent' borderRadius="8px" colorScheme='teal' size='lg'>SIGN IN</Button></Link>
+                <Link to={'/login'} style={{textDecoration:'none'}}><Button _hover={{cursor:'pointer'}} p='10px 25px' fontSize='20px' bgColor='red' color='white' border='transparent' borderRadius="8px" colorScheme='teal' size='lg'>SIGN IN</Button></Link>
             </div>
         </div>
         <Sidebar/>
