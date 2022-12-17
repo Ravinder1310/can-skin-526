@@ -30,7 +30,7 @@ function Copyright(props) {
 
 const theme = createTheme();
 
-export default function Login() {
+export default function SignUp() {
   const handleSubmit = (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
@@ -59,15 +59,41 @@ export default function Login() {
           }}
         >
          
-          <Text textAlign={'center'} fontSize='35px' mt={'0px'} mb='60px'>
-            Login
+          <Text textAlign={'left'} fontSize='35px' mt={'0px'} >
+            Register Candidate
           </Text>
+          <Box display={'flex'} mt={'-50px'} mb='15px' alignItems='center'>
+          <Text textAlign={'left'} color='grey'>Already have an account? </Text>
+          <Link href='/login' style={{textDecoration:'none'}}>Sign In</Link>
+          </Box>
+          
           <Box  mt='-20px' bgcolor={'#fceff1'} border={'2px dotted red'}  p='0px 10px' mb='30px'>
             <Text textAlign={'left'} >If you are a company looking to hire interns, please login as a company by clicking <span style={{color:'blue',_hover:{cursor:'pointer'}}}  >here</span></Text>
           </Box>
-         <Image _hover={{cursor:'pointer'}} h={'60px'} w='68%' mt='30px' margin={'auto'} src='https://tse1.mm.bing.net/th?id=OIP.JfmT0k-jHFYxNCsKMkk1DgHaBo&pid=Api&P=0'/>
-         <Image _hover={{cursor:'pointer'}} h={'50px'} w='66%' margin={'auto'} src='https://tse3.mm.bing.net/th?id=OIP.pZ6bfFCJw4r8KiSEhPXdsQAAAA&pid=Api&P=0'/>
+         <Image _hover={{cursor:'pointer',width:'90%'}} h={'80px'} w='100%' mt='30px' margin={'auto'} src='https://tse1.mm.bing.net/th?id=OIP.JfmT0k-jHFYxNCsKMkk1DgHaBo&pid=Api&P=0'/>
+         <Image _hover={{cursor:'pointer',width:'90%'}} h={'70px'} w='96%' margin={'auto'} src='https://tse3.mm.bing.net/th?id=OIP.pZ6bfFCJw4r8KiSEhPXdsQAAAA&pid=Api&P=0'/>
+         <Text color={'grey'}>OR</Text>
           <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
+          <TextField
+              margin="normal"
+              required
+              fullWidth
+              id="Fname"
+              label="First name"
+              name="text"
+              autoComplete="Fname"
+              autoFocus
+            />
+            <TextField
+              margin="normal"
+              required
+              fullWidth
+              id="Lname"
+              label="Last name"
+              name="text"
+              autoComplete="Lname"
+              autoFocus
+            />
             <TextField
               margin="normal"
               required
@@ -88,15 +114,7 @@ export default function Login() {
               id="password"
               autoComplete="current-password"
             />
-            <Box display={'flex'} justifyContent='space-between' alignItems={'center'}>
-            <FormControlLabel
-              control={<Checkbox value="remember" color="primary" />}
-              label="Remember me"
-            />
-            <Link href="#" variant="body2">
-                  Forgot password?
-                </Link>
-            </Box>
+
            
             <Button
               type="submit"
@@ -104,15 +122,12 @@ export default function Login() {
               variant="contained"
               sx={{ mt: 3, mb: 2 }}
             >
-              Sign In
+              SignUp
             </Button>
-            <Box display={'flex'} justifyContent='center' alignItems={'center'} gap='5px'>
-            <h4 >Don't have an account? </h4>
-            <Link href={'/signUp'} style={{textDecoration:'none'}}>Create your account</Link>
-            </Box>
+            
           </Box>
         </Box>
-        <Copyright sx={{ mt: 8, mb: 4 }} />
+          
       </Container>
     </ThemeProvider>
   );
