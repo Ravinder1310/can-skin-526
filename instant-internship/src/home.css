@@ -1,0 +1,16 @@
+@media screen and (max-width: 80em) {
+    .box {
+      grid-template-columns: repeat(3,1fr);
+    }
+  }
+@media screen and (max-width: 60em) {
+    .box {
+      grid-template-columns: repeat(2,1fr);
+    }
+  }
+  
+  @media screen and (max-width: 48em) {
+    .box {
+        grid-template-columns: repeat(1,1fr);
+    }
+  }

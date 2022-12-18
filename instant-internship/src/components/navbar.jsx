@@ -1,6 +1,7 @@
 import { HamburgerIcon,Icon } from '@chakra-ui/icons'
 import { Box, Button, DrawerCloseButton, Image, Input,Text } from '@chakra-ui/react'
 import logo from "../images/logo.png"
+// import { Link } from '@mui/material'
 
 import {
     Drawer,
@@ -44,11 +45,11 @@ export default function Navbar(){
                 <DrawerBody>
                    <Box display={'flex'} gap='70px'  fontSize='25px' alignItems={'center'} p='0px 10px' _hover={{cursor:'pointer',bgColor:'grey'}}>
                   <Image w={'40px'} h='40px' src='https://tse1.mm.bing.net/th?id=OIP.vi_vr3buwUjESDFF1_8B2gHaG7&pid=Api&P=0' alt='Error'/>
-                  <Text>Home</Text>
+                  <Link to={'/'} style={{textDecoration:'none',color:'black'}}><Text>Home</Text></Link>
                   </Box> 
                   <Box display={'flex'} gap='60px'  fontSize='25px' alignItems={'center'} p='0px 0px' _hover={{cursor:'pointer',bgColor:'grey'}}>
                   <Image w={'60px'} h='60px' src='https://tse1.mm.bing.net/th?id=OIP.gCZFQJqi9yETUHKZAdvnlwHaHa&pid=Api&P=0' alt='Error'/>
-                  <Text>InternShips</Text>
+                  <Link to='/internship' style={{textDecoration:'none',color:'black'}}><Text>InternShips</Text></Link>
                   </Box>
                   <Box display={'flex'} gap='70px'  fontSize='25px' alignItems={'center'} p='0px 10px' _hover={{cursor:'pointer',bgColor:'grey'}}>
                   <Image w={'40px'} h='40px' src='https://tse4.mm.bing.net/th?id=OIP.IjMhbHfQSR89IqKLTCuicgHaHa&pid=Api&P=0' alt='Error'/>
