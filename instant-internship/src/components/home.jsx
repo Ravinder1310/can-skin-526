@@ -1,6 +1,8 @@
 import { Box,Checkbox,Input,Select,Stack,Text,Image, Grid, Container } from "@chakra-ui/react";
 import SelectTags from "./selectTags";
 import Slider from "./Slider";
+import { Link } from "@chakra-ui/react";
+import '../home.css'
 
 
 export default function Home(){
@@ -8,7 +10,7 @@ export default function Home(){
         <>
         <Container mt={'100px'}>
        <Box mt='-60px' p={'20px'} background='url(https://tse2.mm.bing.net/th?id=OIP.E0rMIItyw-MziPfwMpROswHaEe&pid=Api&P=0) center/cover no-repeat'>
-        <h1 style={{}}  >Let's Get You <span style={{backgroundColor:'red',color:'white',padding:'0px 10px'}}>Ready</span></h1>
+        <h1  >Let's Get You <span style={{backgroundColor:'red',color:'white',padding:'0px 10px'}}>Ready</span></h1>
         <Text fontSize={'25px'}>The One Stop to Upgrade Your Resume. Expand Your Skillset. Do An Internship. Get Placed</Text>
         <Box>
            <SelectTags/>
@@ -18,7 +20,7 @@ export default function Home(){
         <Box textAlign='left' fontSize={'15px'}>
         <h1>PLETHORA OF OPPORTUNITIES<span style={{color:'red'}}> FOR YOU</span></h1>
         <hr style={{marginTop:'50px'}}/>
-        <Text fontSize={'20px'}>We are on a mission to connect employers to young talent all over India. With our strong corporate network, it will no longer be a challenge to find the right internship for you</Text>
+        <Text fontSize={{ base: '25px', md: '40px', lg: '56px' }}>We are on a mission to connect employers to young talent all over India. With our strong corporate network, it will no longer be a challenge to find the right internship for you</Text>
         </Box>
         <Grid templateColumns='repeat(4, 100px)'  w='500px' h='450px'>
             <Image src='https://assets.interntheory.com/creative/home-logo/logo-1.png' alt='Error'></Image>
@@ -45,32 +47,40 @@ export default function Home(){
        </Box>
        <Box mt={'50px'}>
        <h1>LET’S GET SOME<span style={{color:'red'}}> WORK EXPERIENCE</span></h1>
-       <Grid fontSize={'25px'} w={'70%'} m='auto' templateColumns='repeat(4, 1fr)' gap={'10px'} justifyContent='center'>
+       <Grid fontSize={'25px'} w={'70%'} m='auto' templateColumns='repeat(4, 1fr)'  className="box" gap={'10px'} justifyContent='center'>
           
+       <Link href={'/marketing'} style={{textDecoration:'none',color:'black'}}>
             <Box bgColor={'#e4e2e3'} h={'200px'} display='flex' alignItems={'center'} gap='10px' borderRadius={'10px'} p={'20px'} _hover={{bgColor:'#f5ede6',cursor:'pointer'}}>
             <Box border={'3px solid red'} p='10px' borderRadius={'50%'} bgColor='white'>
            <Image borderRadius={'40%'} w={'100px'} src='https://tse1.mm.bing.net/th?id=OIP.EMgPSmGGnR_sSzTQ49jjMwHaHa&pid=Api&P=0' alt='Error'/>
            </Box> 
            <Text>MARKETING</Text>
            </Box>
+          </Link>
+          <Link href={'/business'} style={{textDecoration:'none',color:'black'}}>
            <Box bgColor={'#e4e2e3'} h={'200px'} display='flex' alignItems={'center'} gap='10px' borderRadius={'10px'} p={'20px'}_hover={{bgColor:'#f5ede6',cursor:'pointer'}}>
            <Box border={'3px solid red'} p='10px' borderRadius={'50%'} bgColor='white'>
            <Image borderRadius={'40%'} w={'100px'} src='https://tse3.mm.bing.net/th?id=OIP.71XjYR-lZRozN0JmDfXGtQHaHa&pid=Api&P=0' alt='Error'/>
            </Box> 
            <Text textAlign={'left'}>BUSINESS DEVELOPMENT</Text>
            </Box>
+           </Link>
+           <Link href={'/writing'} style={{textDecoration:'none',color:'black'}}>
            <Box bgColor={'#e4e2e3'} h={'200px'} display='flex' alignItems={'center'} gap='10px' borderRadius={'10px'} p={'20px'}_hover={{bgColor:'#f5ede6',cursor:'pointer'}}>
            <Box border={'3px solid red'} p='25px' borderRadius={'50%'} bgColor='white'>
            <Image  w={'70px'} h='70px' src='https://tse2.mm.bing.net/th?id=OIP.bhQn-MdHmQwjtDrZQ1gsUQHaMI&pid=Api&P=0' alt='Error'/>
            </Box> 
            <Text textAlign={'left'}>CONTENT WRITING</Text>
            </Box>
+           </Link>
+           <Link href={'/graphic'} style={{textDecoration:'none',color:'black'}}>
            <Box bgColor={'#e4e2e3'} h={'200px'} display='flex' alignItems={'center'} gap='10px' borderRadius={'10px'} p={'20px'}_hover={{bgColor:'#f5ede6',cursor:'pointer'}}>
            <Box border={'3px solid red'} p='10px' borderRadius={'50%'} bgColor='white'>
            <Image borderRadius={'40%'} h='100px' w={'110px'} src='https://tse1.mm.bing.net/th?id=OIP.BSObgFiIueMCFWYngBzjuAHaHy&pid=Api&P=0' alt='Error'/>
            </Box>  
            <Text textAlign={'left'}>GRAPHIC DESIGN</Text>
            </Box>
+           </Link>
            <Box bgColor={'#e4e2e3'} h={'200px'} display='flex' alignItems={'center'} gap='10px' borderRadius={'10px'} p={'20px'}_hover={{bgColor:'#f5ede6',cursor:'pointer'}}>
            <Box border={'3px solid red'} p='10px' borderRadius={'50%'} bgColor='white'>
            <Image borderRadius={'40%'} w={'100px'} src='https://tse4.mm.bing.net/th?id=OIP.GsLI48__LzrS0j1BLCQTAgHaHa&pid=Api&P=0' alt='Error'/>
