@@ -74,7 +74,7 @@ export default function Navbar(){
                   </Box>
                   <Box display={'flex'} gap='70px' fontSize='25px' alignItems={'center'} p='0px 10px'_hover={{cursor:'pointer',bgColor:'grey'}}>
                   <Image w={'40px'} h='40px' src='https://tse1.mm.bing.net/th?id=OIP.LG6UqvINZmEBMrUzrhADJAHaHa&pid=Api&P=0' alt='Error'/>
-                  <Text>Login</Text>
+                  <Link to={'/login'} style={{textDecoration:'none',color:'black'}}><Text>Login</Text></Link>
                   </Box>
                 </DrawerBody>
                 </Box>
